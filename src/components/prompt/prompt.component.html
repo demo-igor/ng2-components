@@ -1,0 +1,13 @@
+<!-- Created by igordemo on 10/17/17. -->
+<div class="modal-overlay fade {{ isOpen ? 'modal-overlay-open' : '' }}" (click)="onClose($event)"></div>
+<div class="modal fade {{ isOpen ? 'modal-open' : '' }}" *ngIf="isOpen" (click)="onClose($event)">
+  <div class="promt-content text-center">
+    <div class="promt-header">
+      {{ message }}
+    </div>
+    <div class="promt-footer">
+      <button type="button" class="alert button" (click)="onDecline()">Cancel</button>
+      <button type="button" class="button" (click)="onAccept()">Ok</button>
+    </div>
+  </div>
+</div>

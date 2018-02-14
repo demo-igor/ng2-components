@@ -1,0 +1,11 @@
+<!-- Created by igordemo on 10/15/17. -->
+<div *ngFor="let alert of alerts" class="callout {{ alertCss(alert.type) }}">
+  <p>
+    {{ alert.message }}
+    <a
+      href="javascript:void(0);"
+      class="close"
+      (click)="removeAlert(alert)"
+      *ngIf="!alert.hide">&times;</a>
+  </p>
+</div>
